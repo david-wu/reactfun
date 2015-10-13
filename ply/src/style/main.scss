@@ -1,0 +1,54 @@
+body{
+    background-color: beige;
+}
+
+.top-bar{
+    background-color: white;
+    width: 100%;
+}
+
+.card{
+    &.blurb{
+        background-color: white;
+    }
+    &.medium{
+        width: 500px;
+        height: 500px;
+    }
+    .card-header{
+        height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: grey;
+        padding: 5px;
+    }
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+
+        .card-section{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .section-element{
+                flex: 0 0;
+            }
+            input{
+                width:100%;
+            }
+        }
+
+    }
+}
+
+.flex-1{
+    flex: 1;
+}
+.flex-0{
+    flex: 0;
+}
+
+.flex-shrink{
+    flex-shrink: 1
+}
