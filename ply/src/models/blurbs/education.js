@@ -7,6 +7,8 @@ function EducationBlurb(){
 EducationBlurb.prototype = Object.create(Blurb.prototype);
 
 EducationBlurb.prototype.render = function() {
+    debugger;
+
     var reactComponent = (
         <div {...{
             className: "card medium blurb",
