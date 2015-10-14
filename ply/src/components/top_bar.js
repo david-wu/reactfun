@@ -1,25 +1,25 @@
-import React from 'react'
+// import React from 'react'
 
-var TopBar = React.createClass({
-    getInitialState: function(){
-        return {
-        };
-    },
-    render: function() {
+// var TopBar = React.createClass({
+//     getInitialState: function(){
+//         return {
+//         };
+//     },
+//     render: function() {
 
-        var reactComponent = (
-            <div {...{
-                className: 'top-bar',
-            }}>
+//         var reactComponent = (
+//             <div {...{
+//                 className: 'top-bar',
+//             }}>
 
-                <h1>TopBar!</h1>
+//                 <h1>TopBar!</h1>
 
-            </div>
-        );
+//             </div>
+//         );
 
-        return reactComponent;
-    }
-});
+//         return reactComponent;
+//     }
+// });
 
 
-module.exports = TopBar;
+// module.exports = TopBar;

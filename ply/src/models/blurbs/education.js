@@ -3,6 +3,7 @@ import React from 'react'
 import Blurb from './_blurb.js'
 
 function EducationBlurb(attrs){
+    React.Component.call(this)
     console.log(attrs);
     this.state = {
         editing: false
@@ -11,8 +12,8 @@ function EducationBlurb(attrs){
     this.major = 'sci'
 }
 
-EducationBlurb.prototype = _.extend(React.Component.prototype, Blurb.prototype);
-console.log(EducationBlurb.prototype)
+EducationBlurb.prototype = Object.create(React.Component.prototype);
+_.extend(EducationBlurb.prototype, Blurb.prototype);
 
 EducationBlurb.prototype.form = function(){
     return {
@@ -22,7 +23,7 @@ EducationBlurb.prototype.form = function(){
 };
 
 EducationBlurb.prototype.schoolEl = function(){
-    if(this.state.editing){
+    if(this.state && this.state.editing){
         return(
             <label className="card-section flex-1">
                 School:
@@ -44,25 +45,25 @@ EducationBlurb.prototype.schoolEl = function(){
 
 EducationBlurb.prototype.majorEl = function(){
     // if(this.state.editing){
-        return(
-            <label className="card-section flex-1">
-                Major:
+        // return(
+        //     <label className="card-section flex-1">
+        //         Major:
 
-                    if(this.state.editing){
-                        return (
-                            <input {...{
-                                value: this.major,
-                                onChange: this.handleChange.bind(this),
-                                type: 'text'
-                            }}/>
-                        )
-                    }else{
-                        return (<div>{this.major}</div>)
-                    }
+        //             if(this.state.editing){
+        //                 return (
+        //                     <input {...{
+        //                         value: this.major,
+        //                         onChange: this.handleChange.bind(this),
+        //                         type: 'text'
+        //                     }}/>
+        //                 )
+        //             }else{
+        //                 return (<div>{this.major}</div>)
+        //             }
 
 
-            </label>
-        );
+        //     </label>
+        // );
     // }else{
     //     return(
     //         <label className="card-section flex-1">
@@ -87,7 +88,6 @@ EducationBlurb.prototype.render = function() {
             <div className="card-body">
 
                 {this.schoolEl()}
-                {this.majorEl()}
 
             </div>
         </div>

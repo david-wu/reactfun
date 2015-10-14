@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
-// var htmlreplace = require('gulp-html-replace');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');

@@ -1,17 +1,14 @@
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
 import Main from './components/main'
-import TopBar from './components/top_bar'
-import AddBlurb from './components/add_blurb'
+// import TopBar from './components/top_bar'
+// import AddBlurb from './components/add_blurb'
+import ReactDOM from 'react-dom'
 
-React.render(
+var context = document.getElementById('content')
+
+ReactDOM.render(
   <div>
-    <TopBar/>
-    <Router>
-      <Route name="Main" path="/" component={Main}>
-      </Route>
-      <Route name="AddBlurb" path="add_blurb" component={Main}>
-      </Route>
-    </Router>
-  </div>, document.body);
+    <Main/>
+  </div>, context);
 

@@ -1,12 +1,14 @@
+import _ from 'lodash'
 import React from 'react'
 import Blurb from './_blurb.js'
-import _ from 'lodash'
 
 function SkillsBlurb(){
+    React.Component.call(this)
+
 }
 
-SkillsBlurb.prototype = Object.create(React.Component.prototype);
-_.extend(SkillsBlurb.prototype, Blurb.prototype);
+SkillsBlurb.prototype = Object.create(React.Component.prototype)
+_.extend(SkillsBlurb.prototype, SkillsBlurb.prototype, Blurb.prototype);
 
 SkillsBlurb.prototype.render = function() {
     return (

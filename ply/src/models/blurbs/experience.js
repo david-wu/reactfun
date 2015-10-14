@@ -3,10 +3,11 @@ import React from 'react'
 import Blurb from './_blurb.js'
 
 function ExperienceBlurb(){
+    React.Component.call(this)
     this.state = {};
 }
 
-ExperienceBlurb.prototype = Object.create(React.Component.prototype);
+ExperienceBlurb.prototype = Object.create(React.Component.prototype)
 _.extend(ExperienceBlurb.prototype, Blurb.prototype);
 
 ExperienceBlurb.prototype.render = function() {
