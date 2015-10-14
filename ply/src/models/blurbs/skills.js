@@ -1,13 +1,15 @@
 import React from 'react'
 import Blurb from './_blurb.js'
+import _ from 'lodash'
 
 function SkillsBlurb(){
 }
 
-SkillsBlurb.prototype = Object.create(Blurb.prototype);
+SkillsBlurb.prototype = Object.create(React.Component.prototype);
+_.extend(SkillsBlurb.prototype, Blurb.prototype);
 
 SkillsBlurb.prototype.render = function() {
-    var reactComponent = (
+    return (
         <div {...{
             className: "card medium blurb",
         }}>
@@ -37,8 +39,6 @@ SkillsBlurb.prototype.render = function() {
             </div>
         </div>
     );
-
-    return reactComponent;
 };
 
 module.exports = SkillsBlurb;

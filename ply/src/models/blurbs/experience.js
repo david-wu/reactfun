@@ -1,19 +1,23 @@
+import _ from 'lodash'
 import React from 'react'
 import Blurb from './_blurb.js'
 
 function ExperienceBlurb(){
+    this.state = {};
 }
 
-ExperienceBlurb.prototype = Object.create(Blurb.prototype);
+ExperienceBlurb.prototype = Object.create(React.Component.prototype);
+_.extend(ExperienceBlurb.prototype, Blurb.prototype);
 
 ExperienceBlurb.prototype.render = function() {
-    var reactComponent = (
+    return (
         <div {...{
             className: "card medium blurb",
         }}>
 
             <div className="card-header">
-                ExperienceBlurb!
+                experienceBlurb!
+                {this.toggleEditEl()}
             </div>
 
             <div className="card-body">
@@ -21,7 +25,7 @@ ExperienceBlurb.prototype.render = function() {
                 <label className="card-section flex-1">
                     Skills:
                     <input {...{
-                        onChange: this.handleChange,
+                        onChange: this.handleChange.bind(this),
                         type: 'text'
                     }}/>
                 </label>
@@ -29,7 +33,7 @@ ExperienceBlurb.prototype.render = function() {
                 <label className="card-section flex-1">
                     Start and End Dates:
                     <input {...{
-                        onChange: this.handleChange,
+                        onChange: this.archive.bind(this),
                         type: 'date'
                     }}/>
                 </label>
@@ -37,8 +41,6 @@ ExperienceBlurb.prototype.render = function() {
             </div>
         </div>
     );
-
-    return reactComponent;
 };
 
 module.exports = ExperienceBlurb;

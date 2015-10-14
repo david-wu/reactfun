@@ -20,11 +20,18 @@ var Main = React.createClass({
 
     },
     render: function() {
+        // var blurbs = [];
+        // for(var i = 0; i < 10; i++){
+        //     blurbs.push(new EducationBlurb());
+        // }
+        // console.log(blurbs)
+
         return (
             <div {...{
             }}>
                 <h1>Main!</h1>
-                <EducationBlurb/>
+
+                <EducationBlurb data={{test:3}}/>
                 <WorkHistoryBlurb/>
                 <SkillsBlurb/>
             </div>

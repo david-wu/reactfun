@@ -9,4 +9,16 @@ function User(){
 User.prototype = Object.create(React.Component);
 _.extend(User.prototype, Persistent.prototype);
 
+User.prototype.education = function(){
+
+}
+
+User.prototype.experience = function(){
+
+}
+
+User.prototype.skills = function(){
+
+}
+
 module.exports = User;

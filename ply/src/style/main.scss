@@ -16,6 +16,8 @@ body{
         height: 500px;
     }
     .card-header{
+        display: flex;
+        justify-content: space-between;
         height: 30px;
         font-size: 20px;
         font-weight: bold;
